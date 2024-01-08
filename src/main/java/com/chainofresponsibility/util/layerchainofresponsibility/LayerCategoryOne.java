@@ -14,7 +14,7 @@ public class LayerCategoryOne implements LayerCategorizer {
 
     @Override
     public void categorizeLayer(LayerRequest layerRequest, Layer layer) {
-        if (layerRequest.selection1() == 1) {// category1
+        if (layerRequest.selection1() == LayerSelectionOne.CATEGORY_ONE.getCategoryValue()) {// category1
             //field1 and field2 will be set. rest null
             layer.setField1("field1-set");
             layer.setField2("field2-set");
