@@ -4,18 +4,16 @@ import com.chainofresponsibility.dto.LayerRequest;
 import com.chainofresponsibility.entity.Layer;
 import com.chainofresponsibility.repository.LayerRepository;
 import com.chainofresponsibility.util.layerchainofresponsibility.LayerClient;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
+@RequiredArgsConstructor
 public class LayerService {
 
     private final LayerRepository layerRepository;
     private final LayerClient layerClient;
 
-    public LayerService(LayerRepository layerRepository, LayerClient layerClient) {
-        this.layerRepository = layerRepository;
-        this.layerClient = layerClient;
-    }
 
 
     public Layer createLayer(LayerRequest layerRequest) {
